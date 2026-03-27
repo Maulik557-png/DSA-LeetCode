@@ -1,3 +1,5 @@
+package LeetCode;
+
 public class LeetCode443 {
 
     public static int compress(char[] chars) {

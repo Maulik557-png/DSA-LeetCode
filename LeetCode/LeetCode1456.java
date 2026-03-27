@@ -1,3 +1,5 @@
+package LeetCode;
+
 public class LeetCode1456 {
 
     public static void main(String[] args) {

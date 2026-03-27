@@ -1,3 +1,5 @@
+package LeetCode;
+
 public class LeetCode424 {
     public static void main(String[] args) {
         // nums = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0]

@@ -1,3 +1,5 @@
+package LeetCode;
+
 public class LeetCode392 {
 
     // public static boolean isSubsequence(String s, String t) {

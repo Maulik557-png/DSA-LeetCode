@@ -17,13 +17,22 @@ public class LinkedListAdd {
             size = 0;
         }
 
+        public void addFirst(int val) {
+            Node node = new Node();
+            node.data = val;
+            node.next = head;
+            head = node;
+            if (isEmpty()) {
+                tail = node;
+            }
+            size++;
+        }
+
         public void addLast(int val) {
             Node node = new Node();
             node.data = val;
             node.next = null;
-            if (size == 0) {
-                node.data = val;
-                node.next = null;
+            if (isEmpty()) {
                 head = tail = node;
             } else {
                 tail.next = node;
@@ -32,29 +41,31 @@ public class LinkedListAdd {
             size++;
         }
 
-        public int removeFirst() {
-            int val;
-            if(size == 0) {
-                System.out.println("Linked list is empty");
-                val = -1;
-            } else if(size == 1) {
-                val = head.data;
-                head = null;
-                tail = null;
-                size--;
+        public void addAt(int index, int val) {
+            if (index < 0 || index > size) {
+                System.out.println("IndexOutOfBoundsException");
+            } else if (index == 0) {
+                addFirst(val);
+            } else if (index == size) {
+                addLast(val);
             } else {
-                val = head.data;
-                head = head.next;
-                size--;
-            }  
-            return val;
+                Node node = new Node();
+                node.data = val;
+                Node temp = head;
+                for (int i = 0; i < index - 1; i++) {
+                    temp = temp.next;
+                }
+                node.next = temp.next;
+                temp.next = node;
+                size++;
+            }
         }
-        
+
         public void display() {
-            if(size == 0) System.out.println("Linked list is empty");
-            Node node = new Node();
-            node = head;
-            while(node != null) {
+            if (isEmpty())
+                System.out.println("Linked list is empty");
+            Node node = head;
+            while (node != null) {
                 System.out.println(node.data);
                 node = node.next;
             }
@@ -63,30 +74,27 @@ public class LinkedListAdd {
         public int size() {
             return size;
         }
+
+        public boolean isEmpty() {
+            return size == 0;
+        }
     }
 
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
-        ll.addLast(10);
-        ll.removeFirst();
-        ll.addLast(20);
-        ll.removeFirst();
-        ll.addLast(30);
-        ll.removeFirst();
-        ll.addLast(40);
-        ll.removeFirst();
+        ll.addFirst(40);
+        ll.addFirst(30);
+        ll.addFirst(20);
+        ll.addFirst(10);
         ll.addLast(50);
-        ll.removeFirst();
         ll.addLast(60);
-        ll.removeFirst();
         ll.addLast(70);
-        ll.removeFirst();
         ll.addLast(80);
-        ll.removeFirst();
         ll.addLast(90);
-        ll.removeFirst();
-        ll.addLast(100);
         ll.display();
+        System.out.println("=========");
+        ll.addAt(6, 65);
+        ll.display();
+        System.out.println(ll.size());
     }
 }
-

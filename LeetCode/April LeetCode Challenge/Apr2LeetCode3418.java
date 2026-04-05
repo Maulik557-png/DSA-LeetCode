@@ -1,4 +1,4 @@
-public class LeetCode3418Apr2 {
+public class Apr2LeetCode3418 {
     public static void main(String[] args) {
         int[][] coins = {{0,1,-1}, {1,-2,3}, {2,-3,4}};
         System.out.println(maximumAmount(coins));

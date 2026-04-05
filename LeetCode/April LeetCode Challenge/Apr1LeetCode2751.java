@@ -6,7 +6,7 @@ import java.util.Stack;
 // import java.util.HashMap;
 // import java.util.TreeMap;
 
-public class LeetCode2751Apr1 {
+public class Apr1LeetCode2751 {
     public static void main(String[] args) {
 
         int[] pos = { 3, 5, 2, 6 };

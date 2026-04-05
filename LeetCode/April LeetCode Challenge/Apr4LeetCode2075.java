@@ -1,5 +1,4 @@
-public class LeetCode2075Apr4 {
-
+public class Apr4LeetCode2075 {
     public static void main(String[] args) {
         String encodedText = "iveo    eed   l te   olc";
         int rows = 4;

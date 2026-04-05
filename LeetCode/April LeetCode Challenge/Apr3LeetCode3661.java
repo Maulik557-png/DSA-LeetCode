@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class LeetCode3661Apr3 {
+public class Apr3LeetCode3661 {
     public static void main(String[] args) {
         int[] robots = { 10, 2 };
         int[] distances = { 5, 1 };

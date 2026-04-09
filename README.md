@@ -8,8 +8,6 @@ A comprehensive personal learning repository for mastering **Data Structures & A
 - [Content Overview](#content-overview)
 - [Getting Started](#getting-started)
 - [Problem Categories](#problem-categories)
-- [Key Patterns & Concepts](#key-patterns--concepts)
-- [How to Use This Repository](#how-to-use-this-repository)
 
 ## Repository Structure
 

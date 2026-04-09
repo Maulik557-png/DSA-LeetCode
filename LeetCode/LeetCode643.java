@@ -1,7 +1,11 @@
-package LeetCode;
-
 public class LeetCode643 {
-
+    public static void main(String[] args) {
+        int[] array = {-1};
+        int k = 1;
+    
+        System.out.println(findMaxAverage(array, k));
+    }
+    
     public static double findMaxAverage(int[] nums, int k) {
         double windowSum = 0;
         
@@ -19,13 +23,4 @@ public class LeetCode643 {
         return maxSum / k;
     }
 
-    public static void main(String[] args) {
-        
-        int[] array = {-1};
-        int k = 1;
-
-        System.out.println(findMaxAverage(array, k));
-
-
-    }
 }

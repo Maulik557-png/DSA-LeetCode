@@ -1,5 +1,3 @@
-package LeetCode;
-
 public class LeetCode1658 {
     public static void main(String[] args) {
         int[] nums = { 1, 1, 4, 2, 3 };

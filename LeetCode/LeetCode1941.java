@@ -1,5 +1,3 @@
-package LeetCode;
-
 public class LeetCode1941 {
     public static void main(String[] args) {
         String s = "abacbc";

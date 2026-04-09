@@ -1,5 +1,3 @@
-package LeetCode;
-
 public class LeetCode76 {
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
@@ -26,24 +24,19 @@ public class LeetCode76 {
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
             window[c]++;
-
             if (window[c] <= target[c]) {
                 count++;
             }
             while (count == t.length()) {
-
                 if (right - left + 1 < minLen) {
                     minLen = right - left + 1;
                     start = left;
                 }
-
                 char leftChar = s.charAt(left);
                 window[leftChar]--;
-
                 if (window[leftChar] < target[leftChar]) {
                     count--;
                 }
-
                 left++;
             }
         }

@@ -1,6 +1,3 @@
-package LeetCode;
-
-// import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -20,22 +17,24 @@ public class LeetCode1207 {
         return set.size() == map.size();
     }
 
-    // Over Complicated
-    // public static boolean uniqueOccurrences(int[] nums) {
-    //     Set<Integer> set = new HashSet<>();
-    //     Map<Integer, Integer> map = new HashMap<>();
-
-    //     for(int n: nums)  {
-    //         map.put(n, map.getOrDefault(n, 1));
-    //         if(!set.add(n))  {
-    //             map.put(n, map.get(n) + 1);
-    //         } 
-    //         set.add(n);
+    // public boolean uniqueOccurrences(int[] arr) {
+    //     int max = arr[0];
+    //     int min = arr[0];
+    //     for (int n : arr) {
+    //         max = Math.max(max, n);
+    //         min = Math.min(min, n);
     //     }
 
-    //     Collection<Integer> values = map.values();
-    //     HashSet<Integer> uniqueValues = new HashSet<>(values);
-    //     return uniqueValues.size() == values.size();
-    // }
+    //     int[] freq = new int[max - min + 1];
+    //     boolean[] occured = new boolean[arr.length + 1];
+    //     for (int n : arr) freq[n - min]++;
 
+    //     for (int n: freq) {
+    //         if (n > 0) {
+    //             if (occured[n]) return false;
+    //             occured[n] = true;
+    //         }
+    //     }
+    //     return true;
+    // }
 }

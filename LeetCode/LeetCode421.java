@@ -1,41 +1,25 @@
-package LeetCode;
+import java.util.HashSet;
+import java.util.Set;
 
 public class LeetCode421 {
-    public static void main(String[] args) {
-        int[] nums = {3,10,5,25,2,8};
-        
-        System.out.println(findMaximumXOR(nums));
-    }
+    public int findMaximumXOR(int[] nums) {
+        int max = 0;
+        int mask = 0;
 
-    public static int findMaximumXOR(int[] nums) {
-        int left = 0;
-        int res = 0;
-
-        for(; left < nums.length; left++) {
-            int right = left + 1;
-            while(right < nums.length)   {
-                res = Math.max(res, (nums[left] ^ nums[right]));
-                right++;
+        for (int bit = 31; bit >= 0; bit--) {
+            mask = mask | (1 << bit);
+            Set<Integer> prefixes = new HashSet<>();
+            for (int num : nums) {
+                prefixes.add(num & mask);
+            }
+            int candidate = max | (1 << bit);
+            for (int p : prefixes) {
+                if (prefixes.contains(p ^ candidate)) {
+                    max = candidate;
+                    break;
+                }
             }
         }
-        return res;
+        return max;
     }
-
-    // public int findMaximumXOR(int[] nums) {
-    //     int left = 0;
-    //     int right = 0;
-    //     int res = 0;
-
-    //     int or = 0;
-
-    //     for(; right < nums.length; right++) {
-    //         or = nums[left] ^ nums[right];
-    //         while((or < res) && left < right)   {
-    //             left++;
-    //             or = nums[left] ^ nums[right];
-    //         }
-    //         res = Math.max(res, or);
-    //     }
-    //     return res;
-    // }
 }

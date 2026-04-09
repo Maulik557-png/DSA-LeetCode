@@ -13,20 +13,20 @@ A comprehensive personal learning repository for mastering **Data Structures & A
 
 ## Repository Structure
 
-DSA-LeetCode
-│
-├───DSA
-│   ├───Patterns  # Core pattern practice to get hands on with loops and conditional statements
-│   └───pepcoding  # Structured DSA course materials
-│       ├───Arrays  # Array manipulation and optimization problems
-│       ├───Basic  # Foundational concepts and problems
-│       ├───Linked_List  # Linked list operations and patterns
-│       ├───Queue  # Queue data structure implementations
-│       └───Stack  # Stack data structure implementations
-│
-└───LeetCode  # 80+ LeetCode problems (numbered by problem ID)
-    ├───April LeetCode Challenge  # Monthly challenge solutions
-    └───Basic  # Foundational LeetCode problems
+```text
+DSA-LeetCode/
+├── DSA/
+│   ├── Patterns/                # Core pattern practice (loops and conditionals)
+│   └── pepcoding/               # Structured DSA course materials
+│       ├── Arrays/              # Array manipulation and optimization
+│       ├── Basic/               # Foundational concepts and problems
+│       ├── Linked_List/         # Linked list operations and patterns
+│       ├── Queue/               # Queue implementations
+│       └── Stack/               # Stack implementations
+└── LeetCode/                    # 80+ LeetCode problems (by problem ID)
+    ├── April LeetCode Challenge/ # Monthly challenge solutions
+    └── Basic/                   # Foundational LeetCode problems
+```
 
 ## Content Overview
 

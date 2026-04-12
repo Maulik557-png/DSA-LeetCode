@@ -14,42 +14,46 @@ public class LeetCode451 {
 
     public static String frequencySort(String s) {
         Map<Character, Integer> map = new HashMap<>();
-        List<Character>[] freq = new List[s.length() + 1];
+        List<Character> list = new ArrayList<>(map.keySet());
         StringBuilder sb = new StringBuilder();
 
         for (char c : s.toCharArray())
             map.put(c, map.getOrDefault(c, 0) + 1);
+        list.sort((a, b) -> map.get(b) - map.get(a));
 
-        map.keySet().forEach(
-                c -> {
-                    if (freq[map.get(c)] == null)
-                        freq[map.get(c)] = new ArrayList<>();
-                    freq[map.get(c)].add(c);
-                });
-
-        for (int i = freq.length - 1; i > 0; i--)
-            if (freq[i] != null)
-                for (Character c : freq[i])
-                    for (int j = 0; j < i; j++)
-                        sb.append(c);
-
+        for (char c : list) {
+            int freq = map.get(c);
+            for (int i = 0; i < freq; i++)
+                sb.append(c);
+        }
         return sb.toString();
     }
-
+    
+    // @SuppressWarnings("unchecked")
     // public static String frequencySort(String s) {
     // Map<Character, Integer> map = new HashMap<>();
-    // List<Character> list = new ArrayList<>(map.keySet());
+    // List<Character>[] freq = new ArrayList[s.length() + 1];
     // StringBuilder sb = new StringBuilder();
 
-    // for (char c : s.toCharArray()) map.put(c, map.getOrDefault(c, 0) + 1);
-    // list.sort((a, b) -> map.get(b) - map.get(a));
+    // for (char c : s.toCharArray())
+    // map.put(c, map.getOrDefault(c, 0) + 1);
 
-    // for (char c : list) {
-    // int freq = map.get(c);
-    // for (int i = 0; i < freq; i++) sb.append(c);
-    // }
+    // map.keySet().forEach(
+    // c -> {
+    // if (freq[map.get(c)] == null)
+    // freq[map.get(c)] = new ArrayList<>();
+    // freq[map.get(c)].add(c);
+    // });
+
+    // for (int i = freq.length - 1; i > 0; i--)
+    // if (freq[i] != null)
+    // for (Character c : freq[i])
+    // for (int j = 0; j < i; j++)
+    // sb.append(c);
+
     // return sb.toString();
     // }
+
 
     // public static String frequencySort(String s) {
     // int[] arr = new int[128];

@@ -1,7 +1,7 @@
 // import java.util.HashMap;
 // import java.util.Map;
 
-public class April12LeetCode1320 {
+public class Apr12LeetCode1320 {
     public static void main(String[] args) {
         String s = "HAPPY";
         System.out.println(minimumDistance(s));

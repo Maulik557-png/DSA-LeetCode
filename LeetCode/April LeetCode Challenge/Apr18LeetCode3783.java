@@ -1,4 +1,4 @@
-public class LeetCode3783 {
+public class Apr18LeetCode3783 {
     public static void main(String[] args) {
         int n = 325;
         System.out.println(mirrorDistance(n));

@@ -21,7 +21,7 @@ DSA-LeetCode/
 │       ├── Linked_List/         # Linked list operations and patterns
 │       ├── Queue/               # Queue implementations
 │       └── Stack/               # Stack implementations
-└── LeetCode/                    # 90+ LeetCode problems (by problem ID)
+└── LeetCode/                    # 95+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/ # Monthly challenge solutions
     └── Basic/                   # Foundational LeetCode problems
 ```
@@ -33,7 +33,7 @@ DSA-LeetCode/
 - **Pepcoding**: Structured course covering fundamental data structures and algorithms with progressive complexity
 
 ### LeetCode Folder
-- **90+ Problems**: Organized by problem number, covering various difficulty levels
+- **95+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -63,4 +63,4 @@ DSA-LeetCode/
 
 **Last Updated**: April 2026  
 **Language**: Java  
-**Total Problems**: 90+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 95+ LeetCode problems + Structured DSA course materials

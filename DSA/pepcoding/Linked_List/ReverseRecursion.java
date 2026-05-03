@@ -1,6 +1,6 @@
 package DSA.pepcoding.Linked_List;
 
-public class ReverseUsingRecursion {
+public class ReverseRecursion {
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addLast(4);

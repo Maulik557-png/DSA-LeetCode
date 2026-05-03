@@ -1,6 +1,6 @@
 package DSA.pepcoding.Linked_List;
 
-public class ReverseLinkedListPointerIterative {
+public class ReversePointerIterative {
     public static class Node {
         int data;
         Node next;

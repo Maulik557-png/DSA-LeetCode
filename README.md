@@ -21,7 +21,7 @@ DSA-LeetCode/
 │       ├── Linked_List/         # Linked list operations and patterns
 │       ├── Queue/               # Queue implementations
 │       └── Stack/               # Stack implementations
-└── LeetCode/                    # 95+ LeetCode problems (by problem ID)
+└── LeetCode/                    # 100+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/ # Monthly challenge solutions
     └── Basic/                   # Foundational LeetCode problems
 ```
@@ -29,21 +29,25 @@ DSA-LeetCode/
 ## Content Overview
 
 ### DSA Folder
+
 - **Patterns**: Common pattern problems to practice loops and conditional statements
 - **Pepcoding**: Structured course covering fundamental data structures and algorithms with progressive complexity
 
 ### LeetCode Folder
-- **95+ Problems**: Organized by problem number, covering various difficulty levels
+
+- **100+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
 ## Getting Started
 
 ### Prerequisites
+
 - Java 8 or higher
 - A Java IDE (IntelliJ IDEA, Eclipse, VS Code, etc.)
 
 ### Running Solutions
+
 1. Clone or download the repository
 2. Open any `.java` file in your preferred Java IDE
 3. Compile and run individual problem solutions
@@ -52,6 +56,7 @@ DSA-LeetCode/
 ## Problem Categories
 
 ### Common Topics Covered
+
 - **Arrays & Strings**: Manipulation, searching, sorting, sliding window
 - **Linked Lists**: Traversal, modification, cycle detection
 - **Stacks & Queues**: Implementation, balanced parentheses, monotonic structures
@@ -61,6 +66,6 @@ DSA-LeetCode/
 
 ---
 
-**Last Updated**: April 2026  
+**Last Updated**: May 2026  
 **Language**: Java  
-**Total Problems**: 95+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 100+ LeetCode problems + Structured DSA course materials

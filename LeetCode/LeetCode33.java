@@ -6,26 +6,6 @@ public class LeetCode33 {
     }
 
     public static int search(int[] nums, int k) {
-
-        int l = 0;
-        int r = nums.length - 1;
-        int mid = (l + r) / 2;
-
-        if(nums[mid] == k) return mid;
-
-        int nl = mid - 1;
-        int nr = mid + 1;
-
-        while(nums[mid] != k) {
-
-        }
-
-
-
-
-
-
-
         return -1;
     }
 
@@ -37,12 +17,10 @@ public class LeetCode33 {
 
         int l = 0;
         int r = n - 1;
-        
-        while(l <= r) {
-            
-            int mid = (l + r) / 2;
 
-            if(nums[mid] >= k) {
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (nums[mid] >= k) {
                 res = mid;
                 r = mid - 1;
             } else {
@@ -59,11 +37,9 @@ public class LeetCode33 {
         int res = n;
         int l = 0;
         int r = n - 1;
-        while(l <= r) {
-            
+        while (l <= r) {
             int mid = (l + r) / 2;
-
-            if(nums[mid] > k) {
+            if (nums[mid] > k) {
                 res = mid;
                 r = mid - 1;
             } else {
@@ -72,5 +48,4 @@ public class LeetCode33 {
         }
         return res;
     }
-
 }

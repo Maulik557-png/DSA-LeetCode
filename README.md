@@ -15,13 +15,15 @@ A comprehensive personal learning repository for mastering **Data Structures & A
 DSA-LeetCode/
 ├── DSA/
 │   ├── Patterns/                # Core pattern practice (loops and conditionals)
-│   └── pepcoding/               # Structured DSA course materials
-│       ├── Arrays/              # Array manipulation and optimization
-│       ├── Basic/               # Foundational concepts and problems
-│       ├── Linked_List/         # Linked list operations and patterns
-│       ├── Queue/               # Queue implementations
-│       └── Stack/               # Stack implementations
-└── LeetCode/                    # 100+ LeetCode problems (by problem ID)
+│   ├── pepcoding/               # Structured DSA course materials
+│   │   ├── Arrays/              # Array manipulation and optimization
+│   │   ├── Basic/               # Foundational concepts and problems
+│   │   ├── Linked_List/         # Linked list operations and patterns
+│   │   ├── Queue/               # Queue implementations
+│   │   └── Stack/               # Stack implementations
+│   └── TUF/                      # The Ultimate Fundamentals course
+│       └── Binary_Search/        # Binary search algorithms and patterns
+└── LeetCode/                    # 105+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/ # Monthly challenge solutions
     └── Basic/                   # Foundational LeetCode problems
 ```
@@ -32,10 +34,11 @@ DSA-LeetCode/
 
 - **Patterns**: Common pattern problems to practice loops and conditional statements
 - **Pepcoding**: Structured course covering fundamental data structures and algorithms with progressive complexity
+- **TUF (The Ultimate Fundamentals)**: Advanced DSA concepts including searching, sorting, and optimization techniques
 
 ### LeetCode Folder
 
-- **100+ Problems**: Organized by problem number, covering various difficulty levels
+- **105+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -68,4 +71,4 @@ DSA-LeetCode/
 
 **Last Updated**: May 2026  
 **Language**: Java  
-**Total Problems**: 100+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 105+ LeetCode problems + Structured DSA course materials

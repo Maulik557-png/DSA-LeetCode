@@ -23,7 +23,7 @@ DSA-LeetCode/
 │   │   └── Stack/               # Stack implementations
 │   └── TUF/                      # The Ultimate Fundamentals course
 │       └── Binary_Search/        # Binary search algorithms and patterns
-└── LeetCode/                    # 125+ LeetCode problems (by problem ID)
+└── LeetCode/                    # 140+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/ # Monthly challenge solutions
     └── Basic/                   # Foundational LeetCode problems
 ```
@@ -38,7 +38,7 @@ DSA-LeetCode/
 
 ### LeetCode Folder
 
-- **125+ Problems**: Organized by problem number, covering various difficulty levels
+- **140+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -69,6 +69,6 @@ DSA-LeetCode/
 
 ---
 
-**Last Updated**: May 2026  
+**Last Updated**: June 2026  
 **Language**: Java  
-**Total Problems**: 125+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 140+ LeetCode problems + Structured DSA course materials

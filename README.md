@@ -21,9 +21,12 @@ DSA-LeetCode/
 │   │   ├── Linked_List/         # Linked list operations and patterns
 │   │   ├── Queue/               # Queue implementations
 │   │   └── Stack/               # Stack implementations
+|   |   └── Tries/
+|   |       └── Generic_Tree/     # Generic tree data members and operations
 │   └── TUF/                      # The Ultimate Fundamentals course
 │       └── Binary_Search/        # Binary search algorithms and patterns
-└── LeetCode/                    # 140+ LeetCode problems (by problem ID)
+|       └── Binary_Tries/         # Binary trie DFS and BFS implementations
+└── LeetCode/                    # 145+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/ # Monthly challenge solutions
     └── Basic/                   # Foundational LeetCode problems
 ```
@@ -34,11 +37,11 @@ DSA-LeetCode/
 
 - **Patterns**: Common pattern problems to practice loops and conditional statements
 - **Pepcoding**: Structured course covering fundamental data structures and algorithms with progressive complexity
-- **TUF (The Ultimate Fundamentals)**: Advanced DSA concepts including searching, sorting, and optimization techniques
+- **TUF**: Advanced DSA concepts including binary tree, binary search and optimization techniques
 
 ### LeetCode Folder
 
-- **140+ Problems**: Organized by problem number, covering various difficulty levels
+- **145+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -71,4 +74,4 @@ DSA-LeetCode/
 
 **Last Updated**: June 2026  
 **Language**: Java  
-**Total Problems**: 140+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 145+ LeetCode problems + Structured DSA course materials

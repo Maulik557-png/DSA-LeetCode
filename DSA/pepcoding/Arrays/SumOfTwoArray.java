@@ -1,3 +1,5 @@
+package DSA.pepcoding.Arrays;
+
 public class SumOfTwoArray {
     public static void main(String[] args) {
         int[] nums1 = {1,2,2,1};

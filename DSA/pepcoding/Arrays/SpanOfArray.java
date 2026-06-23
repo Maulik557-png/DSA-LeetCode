@@ -1,3 +1,5 @@
+package DSA.pepcoding.Arrays;
+
 public class SpanOfArray    {
 
     public static void main(String[] args) {

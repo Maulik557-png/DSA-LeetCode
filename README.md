@@ -26,7 +26,7 @@ DSA-LeetCode/
 │   └── TUF/                      # The Ultimate Fundamentals course
 │       └── Binary_Search/        # Binary search algorithms and patterns
 |       └── Binary_Tries/         # Binary trie DFS and BFS implementations
-└── LeetCode/                    # 145+ LeetCode problems (by problem ID)
+└── LeetCode/                    # 155+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/ # Monthly challenge solutions
     └── Basic/                   # Foundational LeetCode problems
 ```
@@ -41,7 +41,7 @@ DSA-LeetCode/
 
 ### LeetCode Folder
 
-- **145+ Problems**: Organized by problem number, covering various difficulty levels
+- **155+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -74,4 +74,4 @@ DSA-LeetCode/
 
 **Last Updated**: June 2026  
 **Language**: Java  
-**Total Problems**: 145+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 155+ LeetCode problems + Structured DSA course materials

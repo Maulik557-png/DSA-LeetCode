@@ -13,36 +13,36 @@ public class BalancedBracket {
             if(isOpeningBracket(ch))  {
                 st.push(ch);
             } else if(isRoundClosing(ch)) {
-                if(st.size() == 0)  return false;
+                if(st.isEmpty())  return false;
                 else if(st.peek() != '(')   return false;
                 else  st.pop();
             } else if (isCurlyClosing(ch)) {
-                if(st.size() == 0)  return false;
+                if(st.isEmpty())  return false;
                 else if(st.peek() != '{')   return false;
                 else  st.pop();
             } else if (isSqureClosing(ch)) {
-                if(st.size() == 0)  return false;
+                if(st.isEmpty())  return false;
                 else if(st.peek() != '[')   return false;
                 else  st.pop();
             }
         }
-        if(st.size() == 0)  return true;
+        if(st.isEmpty())  return true;
         else  return true;
     }
 
     private static boolean isOpeningBracket(char c)    {
-        return (c == '(' || c == '{' || c == '[') ? true: false;
+        return c == '(' || c == '{' || c == '[';
     }
 
     private static boolean isRoundClosing(char c)    {
-        return (c == ')') ? true: false;
+        return c == ')';
     }
 
     private static boolean isCurlyClosing(char c)    {
-        return (c == '}') ? true: false;
+        return c == '}';
     }
 
     private static boolean isSqureClosing(char c)    {
-        return (c == ']') ? true: false;
+        return c == ']';
     }
 }

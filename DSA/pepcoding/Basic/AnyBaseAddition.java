@@ -8,14 +8,14 @@ public class AnyBaseAddition {
     }
 
     private static long add(int num1, int num2, int b) {
-        int digit1 = num1%10;
-        int digit2 = num2%10;
+        int digit1;
+        int digit2;
 
         int carry = 0;
         int count = 1;
         
         long newNum = 0;
-        int digit = b - 1;
+        int digit;
 
         while (num1 > 0 || num2 > 0 || carry > 0) {
             digit1 = num1 % 10;

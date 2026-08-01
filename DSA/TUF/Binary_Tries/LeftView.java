@@ -39,14 +39,4 @@ public class LeftView {
         traverse(node.left, l + 1);
         traverse(node.right, l + 1);
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            this.data = val;
-        }
-    }
 }

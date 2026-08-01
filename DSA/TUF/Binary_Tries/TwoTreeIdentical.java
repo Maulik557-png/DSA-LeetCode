@@ -24,14 +24,4 @@ public class TwoTreeIdentical {
 
         return (p.data == q.data) && isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

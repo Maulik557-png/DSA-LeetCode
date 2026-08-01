@@ -37,14 +37,4 @@ public class DeapthOfTreeLevelOrder {
         }
         return res;
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

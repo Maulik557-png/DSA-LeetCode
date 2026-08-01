@@ -26,11 +26,7 @@ public class CheckBalancedBinaryTree {
         boolean left = isBalanced(node.left);
         boolean right = isBalanced(node.right);
 
-        if (!left || !right) {
-            return false;
-        }
-
-        return true;
+        return (!left || !right);
     }
 
     public static int maxDepth(Node root) {
@@ -39,15 +35,5 @@ public class CheckBalancedBinaryTree {
         }
 
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
-    }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
     }
 }

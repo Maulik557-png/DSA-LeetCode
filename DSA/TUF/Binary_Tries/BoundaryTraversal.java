@@ -87,14 +87,4 @@ public class BoundaryTraversal {
     private static boolean isLeaf(Node node) {
         return node.left == null && node.right == null;
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

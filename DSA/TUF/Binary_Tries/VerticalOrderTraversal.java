@@ -67,26 +67,4 @@ public class VerticalOrderTraversal {
 
         return list;
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            this.data = val;
-        }
-    }
-
-    public static class Tuple {
-        Node node;
-        int vertical;
-        int level;
-
-        public Tuple(Node node, int vertical, int level) {
-            this.node = node;
-            this.vertical = vertical;
-            this.level = level;
-        }
-    }
 }

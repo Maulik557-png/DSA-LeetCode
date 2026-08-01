@@ -34,14 +34,4 @@ public class MaximumSumPath {
 
         return node.data + Math.max(leftSum, rightSum);
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

@@ -10,14 +10,4 @@ public class Skeleton {
         root.left.right = new Node(5);
 
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

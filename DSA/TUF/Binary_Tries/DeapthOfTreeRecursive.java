@@ -18,14 +18,4 @@ public class DeapthOfTreeRecursive {
 
         return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

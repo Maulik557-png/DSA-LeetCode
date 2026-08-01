@@ -57,14 +57,4 @@ public class ZigZagTraversal {
         }
         return list;
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

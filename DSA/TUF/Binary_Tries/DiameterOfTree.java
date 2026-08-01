@@ -26,14 +26,4 @@ public class DiameterOfTree {
         d = Math.max(d, left + right);
         return 1 + Math.max(left, right);
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
-    }
 }

@@ -58,24 +58,4 @@ public class TopView {
 
         return list;
     }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            this.data = val;
-        }
-    }
-
-    public static class Pair {
-        Node node;
-        int level;
-
-        public Pair(Node node, int level) {
-            this.node = node;
-            this.level = level;
-        }
-    }
 }

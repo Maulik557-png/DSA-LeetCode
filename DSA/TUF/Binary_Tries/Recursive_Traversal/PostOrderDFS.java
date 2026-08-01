@@ -1,5 +1,7 @@
 package DSA.TUF.Binary_Tries.Recursive_Traversal;
 
+import DSA.TUF.Binary_Tries.Node;
+
 public class PostOrderDFS {
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -19,15 +21,5 @@ public class PostOrderDFS {
         postOrder(root.left);
         postOrder(root.right);
         System.out.println(root.data);
-    }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
     }
 }

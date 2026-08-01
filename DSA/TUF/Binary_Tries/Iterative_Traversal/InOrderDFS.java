@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 
+import DSA.TUF.Binary_Tries.Node;
+
 public class InOrderDFS {
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -37,15 +39,5 @@ public class InOrderDFS {
         }
 
         return list;
-    }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
     }
 }

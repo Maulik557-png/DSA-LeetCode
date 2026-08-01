@@ -1,5 +1,7 @@
 package DSA.TUF.Binary_Tries.Recursive_Traversal;
 
+import DSA.TUF.Binary_Tries.Node;
+
 public class InOrderDFS {
     public static void main(String[] args) {
         Node root = new Node(1);
@@ -19,15 +21,5 @@ public class InOrderDFS {
         inOrder(root.left);
         System.out.println(root.data);
         inOrder(root.right);
-    }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
     }
 }

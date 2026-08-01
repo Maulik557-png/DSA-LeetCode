@@ -1,5 +1,6 @@
 package DSA.TUF.Binary_Tries.Iterative_Traversal;
 
+import DSA.TUF.Binary_Tries.Node;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -43,15 +44,5 @@ public class PostOrderDFS {
         }
 
         return list;
-    }
-
-    public static class Node {
-        int data;
-        Node left;
-        Node right;
-
-        public Node(int val) {
-            data = val;
-        }
     }
 }

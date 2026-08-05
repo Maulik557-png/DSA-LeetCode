@@ -21,14 +21,15 @@ DSA-LeetCode/
 │   │   ├── Linked_List/         # Linked list operations and patterns
 │   │   ├── Queue/               # Queue implementations
 │   │   └── Stack/               # Stack implementations
-|   |   └── Tries/
-|   |       └── Generic_Tree/     # Generic tree data members and operations
-│   └── TUF/                      # The Ultimate Fundamentals course
-│       └── Binary_Search/        # Binary search algorithms and patterns
-|       └── Binary_Tries/         # Binary trie DFS and BFS implementations
-└── LeetCode/                    # 155+ LeetCode problems (by problem ID)
-    ├── April LeetCode Challenge/ # Monthly challenge solutions
-    └── Basic/                   # Foundational LeetCode problems
+|   |   └── Tries/               # Trie data structure implementations
+│   └── TUF/                             # The Ultimate Fundamentals course
+│       ├── Binary_Search/               # Binary search algorithms and patterns
+|       └── Binary_Tries/                # Binary trie DFS and BFS implementations
+|           ├── Iterative_Traversal/     # Iterative tree traversal methods
+|           └── Recursive_Traversal/     # Recursive tree traversal methods
+└── LeetCode/                        # 180+ LeetCode problems (by problem ID)
+    ├── April LeetCode Challenge/    # April 2024 challenge solutions
+    └── Basic/                       # Basic problems with multiple solutions
 ```
 
 ## Content Overview
@@ -41,7 +42,7 @@ DSA-LeetCode/
 
 ### LeetCode Folder
 
-- **155+ Problems**: Organized by problem number, covering various difficulty levels
+- **180+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -69,9 +70,11 @@ DSA-LeetCode/
 - **Mathematical Problems**: GCD, prime numbers, modular arithmetic
 - **Sliding Window**: Fixed/variable window problems
 - **Two Pointers/Two Sum**: Efficient searching and pairing problems
+- **Binary Search**: Classic search problems and optimizations
+- **Binary Trees**: Traversal, depth-first search, breadth-first search
 
 ---
 
-**Last Updated**: June 2026  
+**Last Updated**: August 2026  
 **Language**: Java  
-**Total Problems**: 155+ LeetCode problems + Structured DSA course materials
+**Total Problems**: 180+ LeetCode problems + Structured DSA course materials

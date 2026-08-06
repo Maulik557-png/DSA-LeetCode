@@ -100,7 +100,7 @@ public class LeetCode150 {
             }
         }
 
-        while (opr.size() > 0) {
+        while (!opr.isEmpty()) {
             char op = opr.pop();
             int n2 = nums.pop();
             int n1 = nums.pop();
@@ -118,18 +118,13 @@ public class LeetCode150 {
     }
 
     private static int performOps(int n1, int n2, char operator) {
-        switch (operator) {
-            case '+':
-                return n1 + n2;
-            case '-':
-                return n1 - n2;
-            case '*':
-                return n1 * n2;
-            case '/':
-                return n1 / n2;
-            default:
-                return 0;
-        }
+        return switch (operator) {
+            case '+' -> n1 + n2;
+            case '-' -> n1 - n2;
+            case '*' -> n1 * n2;
+            case '/' -> n1 / n2;
+            default -> 0;
+        };
     }
 
     // Approach 2
@@ -149,18 +144,13 @@ public class LeetCode150 {
     //     return nums.pop();
     // }
 
-    // private static int performOps(int n1, int n2, String operator) {
-    //     switch (operator) {
-    //         case "+":
-    //             return n1 + n2;
-    //         case "-":
-    //             return n1 - n2;
-    //         case "*":
-    //             return n1 * n2;
-    //         case "/":
-    //             return n1 / n2;
-    //         default:
-    //             return 0;
-    //     }
+    // private static int performOpds(int n1, int n2, String operator) {
+    //     return switch (operator) {
+    //         case "+" -> n1 + n2;
+    //         case "-" -> n1 - n2;
+    //         case "*" -> n1 * n2;
+    //         case "/" -> n1 / n2;
+    //         default -> 0;
+    //     };
     // }
 }

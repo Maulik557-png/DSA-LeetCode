@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 import java.util.ArrayList;
 import java.util.List;
 

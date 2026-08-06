@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 import java.util.Scanner;
 
 public class GCDAndLCM {
@@ -7,10 +9,7 @@ public class GCDAndLCM {
         long orginalNum1 = num1;
         long orginalNum2 = num2;
 
-        int limit = Math.min(num1, num2);
-        // int i = limit / 2;
-
-        int gcd = limit;
+        int gcd;
 
         // while(i > 0) {
         //     if(limit % i == 0)
@@ -37,12 +36,11 @@ public class GCDAndLCM {
     
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
-        int num1 = sc.nextInt();
-        int num2 = sc.nextInt();
-
-        findGCDAndLCM(num1, num2);
-        
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            int num1 = sc.nextInt();
+            int num2 = sc.nextInt();
+            
+            findGCDAndLCM(num1, num2);
+        }
     }
 }

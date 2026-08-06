@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class StockPriceAnalyzer {
@@ -17,9 +19,9 @@ public class StockPriceAnalyzer {
         span[0] = 1;
         for (int i = 1; i < nums.length; i++) {
             // pop + ans -> push
-            while (st.size() > 0 && nums[i] > nums[st.peek()])  st.pop();
+            while (!st.isEmpty() && nums[i] > nums[st.peek()])  st.pop();
             
-            span[i] = (st.size() == 0) ? i + 1: i - st.peek();
+            span[i] = (st.isEmpty()) ? i + 1: i - st.peek();
             st.push(i);
         }
         return span;

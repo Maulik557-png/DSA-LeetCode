@@ -1,10 +1,12 @@
+package DSA.pepcoding.Stack;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class BuildMinimumStackOne {
-    private int[] data;
+    private final int[] data;
     private int tos;
-    private int[] minData;
+    private final int[] minData;
     private int min;
 
     BuildMinimumStackOne(int n) {

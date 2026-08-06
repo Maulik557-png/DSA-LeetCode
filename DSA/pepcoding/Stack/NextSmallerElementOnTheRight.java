@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class NextSmallerElementOnTheRight {
@@ -16,14 +18,14 @@ public class NextSmallerElementOnTheRight {
         st.push(0);
         for (int i = 1; i < nums.length; i++) {
             // pop + ans -> push
-            while(st.size() > 0 && nums[i] < nums[st.peek()])  {
+            while(!st.isEmpty() && nums[i] < nums[st.peek()])  {
                 int pos = st.peek();
                 arr[pos] = nums[i];
                 st.pop();
             }
             st.push(i);
         }
-        while(st.size() > 0)    {
+        while(!st.isEmpty())    {
             int pos = st.peek();
                 arr[pos] = -1;
                 st.pop();

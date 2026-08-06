@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 // **Wrong Approach**
 
 public class CanPlaceFlowers1 {

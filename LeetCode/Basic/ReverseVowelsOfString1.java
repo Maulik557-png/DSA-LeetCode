@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 //Most complex and bullshit way of solving this problem
 //Never recommanded
 

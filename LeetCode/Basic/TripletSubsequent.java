@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 class TripletSubsequent {
     public static boolean increasingTriplet(int[] nums) {
 

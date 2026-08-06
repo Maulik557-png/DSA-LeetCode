@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 public class ReverseWordsInString2 {
     public static String reverseWords(String s) {
     s = s.trim();

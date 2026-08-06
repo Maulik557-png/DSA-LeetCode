@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 public class MergeStringsAlternatively2 {
     public String merge(String word1, String word2) {
         if(word1 == null) return word2;

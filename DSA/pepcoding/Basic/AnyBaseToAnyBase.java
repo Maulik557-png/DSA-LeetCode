@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 public class AnyBaseToAnyBase {
     public static void main(String[] args) {
         int num = 172;
@@ -8,7 +10,7 @@ public class AnyBaseToAnyBase {
     }
 
     private static int anyBaseToDec(int num, int b1) {
-        int rem = 1;
+        int rem;
         int newNum = 0;
         int count = 1;
 
@@ -23,8 +25,7 @@ public class AnyBaseToAnyBase {
     }
 
     private static int DecToAnyBase(int num, int b) {
-
-        int rem = 1;
+        int rem;
         int newNum = 0;
         int count = 1;
 

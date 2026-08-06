@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 import java.util.Scanner;
 
 public class RotateNumber {
@@ -38,12 +40,11 @@ public class RotateNumber {
 
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        long num = sc.nextLong();
-        int k = sc.nextInt();
-
-        System.out.println(rotateTheNumber(num, k));
-        
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            long num = sc.nextLong();
+            int k = sc.nextInt();
+            
+            System.out.println(rotateTheNumber(num, k));
+        }
     }
 }

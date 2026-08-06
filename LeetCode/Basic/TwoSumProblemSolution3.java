@@ -1,4 +1,4 @@
-// Time Complexity : Near to O(n)
+package DSA.LeetCode.Basic;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -7,18 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 
-class Pair {
-    int x, y;
-    public Pair(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-    @Override
-    public String toString() {
-        return "(" + x + "," + y + ")";
-    }
-}
-
+// Time Complexity : Near to O(n)
 public class TwoSumProblemSolution3 {
 
     // Generate all valid pairs for the target

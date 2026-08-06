@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class InfixEvaluation2 {
@@ -77,13 +79,10 @@ public class InfixEvaluation2 {
     }
 
     private static int performOps(int n1, int n2, char operator) {
-        switch (operator) {
-            case '+':
-                return n1 + n2;
-            case '-':
-                return n1 - n2;
-            default:
-                return 0;
-        }
+        return switch (operator) {
+            case '+' -> n1 + n2;
+            case '-' -> n1 - n2;
+            default -> 0;
+        };
     }
 }

@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 public class ReverseVowelsOfString2 {
     public static String reverseVowels(String s) {
         String vowels = "aeiouAEIOU";

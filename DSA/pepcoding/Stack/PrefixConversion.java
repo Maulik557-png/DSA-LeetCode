@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class PrefixConversion {
@@ -40,17 +42,12 @@ public class PrefixConversion {
     }
 
     private static int performOps(int n1, int n2, char operator) {
-        switch (operator) {
-            case 43:
-                return n1 + n2;
-            case 45:
-                return n1 - n2;
-            case 42:
-                return n1 * n2;
-            case 47:
-                return n1 / n2;
-            default:
-                return 0;
-        }
+        return switch (operator) {
+            case 43 -> n1 + n2;
+            case 45 -> n1 - n2;
+            case 42 -> n1 * n2;
+            case 47 -> n1 / n2;
+            default -> 0;
+        };
     }
 }

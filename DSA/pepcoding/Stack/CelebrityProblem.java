@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 // Defination of Celebrity is: A person known by everybody and knows no one.
 
 import java.util.Stack;

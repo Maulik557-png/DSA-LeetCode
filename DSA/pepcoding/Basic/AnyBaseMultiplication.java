@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 public class AnyBaseMultiplication {
     public static void main(String[] args) {
         int num1 = 234;

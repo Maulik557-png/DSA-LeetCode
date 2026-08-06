@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 public class AnyBaseToDec {
     public static void main(String[] args) {
         int num = 492;
@@ -8,7 +10,7 @@ public class AnyBaseToDec {
 
     private static int convert(int num, int b) {
         // int div = num;
-        int rem = 1;
+        int rem;
         int newNum = 0;
         int count = 1;
 

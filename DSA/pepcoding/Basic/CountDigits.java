@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 import java.util.Scanner;
 
 public class CountDigits {
@@ -37,11 +39,10 @@ public class CountDigits {
 
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
-        long n = sc.nextLong();
-
-        System.out.println(countDigits(n));
-        
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            long n = sc.nextLong();
+            
+            System.out.println(countDigits(n));
+        }
     }
 }

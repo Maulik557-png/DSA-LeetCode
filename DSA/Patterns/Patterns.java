@@ -1,3 +1,5 @@
+package DSA.Patterns;
+
 // import java.util.Scanner;
 
 public class Patterns    {

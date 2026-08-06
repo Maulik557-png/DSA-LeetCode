@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 public class MergeStringsAlternatively1 {
     public String merge(String word1, String word2) {
         if(word1 == null) return word2;
@@ -8,7 +10,6 @@ public class MergeStringsAlternatively1 {
         int size = Math.min(word1.length(), word2.length());
 
         for(int i = 0; i < size; i++) {
-            temp = null;
             temp = word1.substring(i, i+1) + word2.substring(i, i+1);
             word = word + temp;
         }

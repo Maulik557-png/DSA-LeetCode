@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 import java.util.Scanner;
 
 public class Fibonacci {
@@ -19,7 +21,7 @@ public class Fibonacci {
 
         int a = 0;
         int b = 1;
-        int c = 0;
+        int c;
         for (int i = 0; i < n; i++) {
             
             System.out.println(a);
@@ -31,11 +33,10 @@ public class Fibonacci {
 
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
-        printFibonacci(n);
-
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            
+            printFibonacci(n);
+        }
     }
 }

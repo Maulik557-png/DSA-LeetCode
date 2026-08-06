@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 public class FindClosestNumberToZero2 {
     public int findClosestNumber(int[] nums) {
         int closest = nums[0];

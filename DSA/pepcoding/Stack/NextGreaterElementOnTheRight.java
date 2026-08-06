@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class NextGreaterElementOnTheRight {
@@ -43,8 +45,8 @@ public class NextGreaterElementOnTheRight {
         
         for (int i = nums.length - 2; i >= 0; i--) {
             // pop -> ans -> push
-            while(st.size() > 0 && nums[i] >= st.peek())  st.pop();
-            arr[i] = (st.size() == 0) ? -1: st.peek();
+            while(!st.isEmpty() && nums[i] >= st.peek())  st.pop();
+            arr[i] = (st.isEmpty()) ? -1: st.peek();
             st.push(nums[i]);
         }
         return arr;

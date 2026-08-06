@@ -5,7 +5,7 @@ import java.util.*;
 public class DataMembers {
     private static class Node {
         private int data;
-        private List<Node> children = new ArrayList<>();
+        private final List<Node> children = new ArrayList<>();
 
         @Override
         public String toString() {
@@ -26,7 +26,7 @@ public class DataMembers {
                 Node node = new Node();
                 node.data = n;
 
-                if (st.size() > 0) {
+                if (!st.isEmpty()) {
                     st.peek().children.add(node);
                 } else {
                     root = node;

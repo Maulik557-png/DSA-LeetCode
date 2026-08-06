@@ -1,3 +1,5 @@
+package DSA.LeetCode.Basic;
+
 public class ProductofArrayExceptSelf3 {
     public static int[] productExceptSelf(int[] nums) {
         int n = nums.length;

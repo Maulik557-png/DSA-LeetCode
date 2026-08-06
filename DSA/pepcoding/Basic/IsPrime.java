@@ -1,3 +1,5 @@
+package DSA.pepcoding.Basic;
+
 import java.util.Scanner;
 
 public class IsPrime {
@@ -22,12 +24,11 @@ public class IsPrime {
 
     public static void main(String[] args) {
         
-        Scanner sc = new Scanner(System.in);
-        int low = sc.nextInt();
-        int high = sc.nextInt();
-
-        printAllPrime(low, high);
-
-        sc.close();
+        try (Scanner sc = new Scanner(System.in)) {
+            int low = sc.nextInt();
+            int high = sc.nextInt();
+            
+            printAllPrime(low, high);
+        }
     }
 }

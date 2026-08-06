@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class InfixConversion {
@@ -32,7 +34,7 @@ public class InfixConversion {
                 }
                 operator.pop();
             } else if (c == '+' || c == '-' || c == '*' || c == '/') {
-                while (operator.size() > 0 && operator.peek() != '(' && precedence(operator.peek()) >= precedence(c)) {
+                while (!operator.isEmpty() && operator.peek() != '(' && precedence(operator.peek()) >= precedence(c)) {
                     char op = operator.pop();
                     String postN2 = postfix.pop();
                     String postN1 = postfix.pop();
@@ -46,7 +48,7 @@ public class InfixConversion {
                 operator.push(c);
             }
         }
-        while (operator.size() > 0) {
+        while (!operator.isEmpty()) {
             char op = operator.pop();
             String postN2 = postfix.pop();
             String postN1 = postfix.pop();

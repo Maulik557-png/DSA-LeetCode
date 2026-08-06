@@ -1,11 +1,13 @@
+package DSA.LeetCode.Basic;
+
 // Solution is not approved!!
 // Time Limit Exceeded for imagine 1000000000 inputs
 
 public class ProductofArrayExceptSelf2 {
     public static int[] productExceptSelf(int[] nums) {
         
-        int left = 1;
-        int right = 1;
+        int left;
+        int right;
         int[] res = new int[nums.length];
         
         for(int i = 0; i < nums.length-1; i++)    {

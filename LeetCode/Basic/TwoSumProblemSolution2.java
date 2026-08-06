@@ -1,7 +1,9 @@
-// Time Complexity : O(n)
+package DSA.LeetCode.Basic;
+
 
 import java.util.HashMap;
 
+// Time Complexity : O(n)
 public class TwoSumProblemSolution2 {
 public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();

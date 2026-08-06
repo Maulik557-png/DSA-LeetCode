@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Stack;
 
 public class WindowMaximum {
@@ -20,10 +22,10 @@ public class WindowMaximum {
         st.push(nums.length-1);
 
         for (int i = nums.length - 2; i >= 0; i--) {
-            while(st.size() > 0 && nums[i] >= nums[st.peek()])    {
+            while(!st.isEmpty() && nums[i] >= nums[st.peek()])    {
                 st.pop();
             }
-            nextGreater[i] = (st.size() == 0) ? nums.length: st.peek();
+            nextGreater[i] = (st.isEmpty()) ? nums.length: st.peek();
             st.push(i);
         }
 

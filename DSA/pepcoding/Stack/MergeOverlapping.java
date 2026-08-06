@@ -1,3 +1,5 @@
+package DSA.pepcoding.Stack;
+
 import java.util.Arrays;
 import java.util.Stack;
 
@@ -41,10 +43,10 @@ public class MergeOverlapping {
         }
 
         Stack<Pair> res = new Stack<>();
-        while(st.size() > 0)  {
+        while(!st.isEmpty())  {
             res.push(st.pop());
         }
-        while (res.size() > 0) {
+        while (!res.isEmpty()) {
             Pair p = res.pop();
             System.out.println(p.st + "-" + p.et);
         }

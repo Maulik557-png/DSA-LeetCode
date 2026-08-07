@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 public class ProductofArrayExceptSelf3 {
     public static int[] productExceptSelf(int[] nums) {
@@ -22,9 +22,9 @@ public class ProductofArrayExceptSelf3 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1,2,0,3,4};
+        int[] nums = { 1, 2, 0, 3, 4 };
         int[] res = productExceptSelf(nums);
-        for(int i : res)    {
+        for (int i : res) {
             System.out.println(i);
         }
     }

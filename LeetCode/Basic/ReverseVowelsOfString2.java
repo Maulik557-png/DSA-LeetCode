@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 public class ReverseVowelsOfString2 {
     public static String reverseVowels(String s) {
@@ -7,8 +7,10 @@ public class ReverseVowelsOfString2 {
         int i = 0, j = arr.length - 1;
 
         while (i < j) {
-            while (i < j && vowels.indexOf(arr[i]) == -1) i++;
-            while (i < j && vowels.indexOf(arr[j]) == -1) j--;
+            while (i < j && vowels.indexOf(arr[i]) == -1)
+                i++;
+            while (i < j && vowels.indexOf(arr[j]) == -1)
+                j--;
 
             if (i < j) {
                 char temp = arr[i];
@@ -24,6 +26,6 @@ public class ReverseVowelsOfString2 {
 
     public static void main(String[] args) {
         String s = "IceCreAm";
-        System.out.println(reverseVowels(s)); 
+        System.out.println(reverseVowels(s));
     }
 }

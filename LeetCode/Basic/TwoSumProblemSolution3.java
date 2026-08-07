@@ -1,11 +1,10 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
 
 // Time Complexity : Near to O(n)
 public class TwoSumProblemSolution3 {
@@ -30,7 +29,7 @@ public class TwoSumProblemSolution3 {
             String key1 = complement + "," + nums[i]; // to match your precomputed pairs
             String key2 = nums[i] + "," + complement; // both orders (just in case)
             if (seen.containsKey(complement) &&
-                (pairSet.contains(key1) || pairSet.contains(key2))) {
+                    (pairSet.contains(key1) || pairSet.contains(key2))) {
                 return new int[] { seen.get(complement), i };
             }
 
@@ -42,19 +41,19 @@ public class TwoSumProblemSolution3 {
 
     // // Check using the set for O(1) lookup
     // public static int[] twoSum(int[] nums, int target, Set<String> pairSet) {
-    //     for (int i = 0; i < nums.length; i++) {
-    //         for (int k = 0; k < i; k++) {
-    //             String key = nums[i] + "," + nums[k];
-    //             if (pairSet.contains(key)) {
-    //                 return new int[] { i, k };
-    //             }
-    //         }
-    //     }
-    //     return new int[] {};
+    // for (int i = 0; i < nums.length; i++) {
+    // for (int k = 0; k < i; k++) {
+    // String key = nums[i] + "," + nums[k];
+    // if (pairSet.contains(key)) {
+    // return new int[] { i, k };
+    // }
+    // }
+    // }
+    // return new int[] {};
     // }
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 7, 11};
+        int[] nums = { 2, 3, 7, 11 };
         int target = 9;
 
         Set<String> pairSet = pPairSet(target); // Precompute valid pairs

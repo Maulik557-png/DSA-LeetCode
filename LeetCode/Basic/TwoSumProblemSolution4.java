@@ -1,6 +1,8 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TwoSumProblemSolution4 {
     public static int[] twoSum(int[] nums, int target) {
@@ -9,7 +11,7 @@ public class TwoSumProblemSolution4 {
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
             if (seen.containsKey(complement)) {
-                return new int[]{ seen.get(complement), i };
+                return new int[] { seen.get(complement), i };
             }
             seen.put(nums[i], i);
         }
@@ -17,7 +19,7 @@ public class TwoSumProblemSolution4 {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 3, 7, 11};
+        int[] nums = { 2, 3, 7, 11 };
         int target = 9;
         int[] solution = twoSum(nums, target);
 

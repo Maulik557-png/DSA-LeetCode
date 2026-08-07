@@ -1,21 +1,23 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 public class MergeStringsAlternatively1 {
     public String merge(String word1, String word2) {
-        if(word1 == null) return word2;
-        if(word2 == null) return word1;
+        if (word1 == null)
+            return word2;
+        if (word2 == null)
+            return word1;
 
         String word = "";
         String temp;
         int size = Math.min(word1.length(), word2.length());
 
-        for(int i = 0; i < size; i++) {
-            temp = word1.substring(i, i+1) + word2.substring(i, i+1);
+        for (int i = 0; i < size; i++) {
+            temp = word1.substring(i, i + 1) + word2.substring(i, i + 1);
             word = word + temp;
         }
-        if(size == word1.length())   
+        if (size == word1.length())
             word += word2.substring(size, word2.length());
-        else 
+        else
             word += word1.substring(size, word1.length());
         return word;
     }

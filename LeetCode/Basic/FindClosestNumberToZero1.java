@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 public class FindClosestNumberToZero1 {
 
@@ -9,18 +9,18 @@ public class FindClosestNumberToZero1 {
 
         // Separate negatives and positives
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] < 0) 
+            if (nums[i] < 0)
                 left.add(nums[i]);
-            else 
+            else
                 right.add(nums[i]);
-            
+
         }
 
         // Handle cases when one side is empty
-        if (left.isEmpty()) 
+        if (left.isEmpty())
             return right.stream().min(Integer::compare).get(); // smallest positive
 
-        if (right.isEmpty()) 
+        if (right.isEmpty())
             return left.stream().max(Integer::compare).get(); // largest negative
 
         // Find largest negative
@@ -37,11 +37,11 @@ public class FindClosestNumberToZero1 {
                 smallest = right.get(i);
         }
 
-        if (Math.abs(largest) < Math.abs(smallest)) 
+        if (Math.abs(largest) < Math.abs(smallest))
             return largest;
-        else if (Math.abs(largest) > Math.abs(smallest)) 
+        else if (Math.abs(largest) > Math.abs(smallest))
             return smallest;
-        else 
+        else
             return Math.max(largest, smallest); // prefer positive on tie
     }
 

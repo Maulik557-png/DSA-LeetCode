@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 class TripletSubsequent {
     public static boolean increasingTriplet(int[] nums) {
@@ -7,10 +7,10 @@ class TripletSubsequent {
         int second = Integer.MAX_VALUE;
         boolean flag = false;
 
-        for(int n : nums)    {
-            if(n <= first) 
+        for (int n : nums) {
+            if (n <= first)
                 first = n;
-            else if(n <= second)
+            else if (n <= second)
                 second = n;
             else {
                 flag = true;
@@ -20,7 +20,7 @@ class TripletSubsequent {
     }
 
     public static void main(String[] args) {
-        int[] nums = {2, 4, -2, -3};
+        int[] nums = { 2, 4, -2, -3 };
         System.out.println(increasingTriplet(nums));
     }
 }

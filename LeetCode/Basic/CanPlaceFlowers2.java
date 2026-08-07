@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 public class CanPlaceFlowers2 {
     public static boolean canPlaceFlowers(int[] flowerbed, int n) {

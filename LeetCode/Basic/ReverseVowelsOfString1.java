@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 //Most complex and bullshit way of solving this problem
 //Never recommanded
@@ -12,10 +12,10 @@ public class ReverseVowelsOfString1 {
     public static String reverseVowels(String s) {
         String vowel = "aAeEiIoOuU";
         Map<Integer, Character> index = new Hashtable<>();
-        
-        for(int i = 0; i < s.length(); i++) {
-            for(int j = 0; j < vowel.length(); j++) {
-                if(s.charAt(i) == vowel.charAt(j)) {
+
+        for (int i = 0; i < s.length(); i++) {
+            for (int j = 0; j < vowel.length(); j++) {
+                if (s.charAt(i) == vowel.charAt(j)) {
                     index.put(i, s.charAt(i)); // Use original character
                 }
             }
@@ -43,7 +43,7 @@ public class ReverseVowelsOfString1 {
         }
 
         char[] result = s.toCharArray();
-        for(int i = 0; i < keys.length; i++) {
+        for (int i = 0; i < keys.length; i++) {
             result[keys[i]] = revList.get(i);
         }
 

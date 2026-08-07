@@ -1,4 +1,4 @@
-package DSA.LeetCode.Basic;
+package Basic;
 
 // **Wrong Approach**
 

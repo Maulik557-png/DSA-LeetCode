@@ -37,4 +37,17 @@ public class DeapthOfTreeLevelOrder {
         }
         return res;
     }
+
+    public static int h;
+
+    public static int depth(Node root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = depth(root.left);
+        int right = depth(root.right);
+
+        return h + Math.max(left, right) + 1;
+    }
 }

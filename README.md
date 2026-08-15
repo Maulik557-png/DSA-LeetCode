@@ -27,7 +27,7 @@ DSA-LeetCode/
 |       └── Binary_Tries/                # Binary trie DFS and BFS implementations
 |           ├── Iterative_Traversal/     # Iterative tree traversal methods
 |           └── Recursive_Traversal/     # Recursive tree traversal methods
-└── LeetCode/                        # 180+ LeetCode problems (by problem ID)
+└── LeetCode/                        # 200+ LeetCode problems (by problem ID)
     ├── April LeetCode Challenge/    # April 2024 challenge solutions
     └── Basic/                       # Basic problems with multiple solutions
 ```
@@ -42,7 +42,7 @@ DSA-LeetCode/
 
 ### LeetCode Folder
 
-- **180+ Problems**: Organized by problem number, covering various difficulty levels
+- **200+ Problems**: Organized by problem number, covering various difficulty levels
 - **Multiple Solutions**: Many problems include alternative approaches and optimizations
 - **Monthly Challenges**: Curated monthly challenge solutions
 
@@ -75,6 +75,6 @@ DSA-LeetCode/
 
 ---
 
-**Last Updated**: August 2026  
-**Language**: Java  
-**Total Problems**: 180+ LeetCode problems + Structured DSA course materials
+**Last Updated**: August 2026
+**Language**: Java
+**Total Problems**: 200+ LeetCode problems + Structured DSA course materials

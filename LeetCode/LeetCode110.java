@@ -66,5 +66,9 @@ public class LeetCode110 {
         public TreeNode(int val) {
             this.val = val;
         }
+
+        public int getVal() {
+            return val;
+        }
     }
 }

@@ -1,6 +1,6 @@
 package DSA.TUF.Binary_Search_Tries;
 
-public class InsertBST {
+public class InsertNode {
     public Node insert(Node root, int key) {
         if (root == null) {
             return new Node(key);

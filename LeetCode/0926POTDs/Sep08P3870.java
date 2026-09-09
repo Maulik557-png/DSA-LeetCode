@@ -1,4 +1,4 @@
-public class Sep07P3870 {
+public class Sep08P3870 {
     public int countCommas(int n) {
         if (n < 1000) {
             return 0;

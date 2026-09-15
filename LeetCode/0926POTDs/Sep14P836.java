@@ -1,4 +1,4 @@
-public class Sep13P836 {
+public class Sep14P836 {
     public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
         int[] x1 = { rec1[0], rec1[2] };
         int[] y1 = { rec1[1], rec1[3] };

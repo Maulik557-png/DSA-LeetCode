@@ -4,7 +4,7 @@ A personal Java repository for practicing **Data Structures and Algorithms** thr
 structured DSA courses, LeetCode problems, daily challenge work, and repeated
 implementation patterns.
 
-The repo now contains **405 Java files** across DSA fundamentals, topic-wise
+The repo now contains **447 Java files** across DSA fundamentals, topic-wise
 practice, LeetCode solutions, and POTD folders.
 
 ## Table of Contents
@@ -47,15 +47,15 @@ DSA-LeetCode/
 
 | Area | Java files | Progress |
 | --- | ---: | --- |
-| LeetCode main solutions | 233 | Problem-numbered solution files such as `LeetCode100.java`, `LeetCode239.java`, and `LeetCode4039.java` |
+| LeetCode main solutions | 258 | Problem-numbered solution files such as `LeetCode100.java`, `LeetCode239.java`, and `LeetCode4039.java` |
 | LeetCode Basic | 22 | Multiple approaches for starter array/string problems |
 | April POTDs | 30 | Daily problem files from April challenge practice |
-| September 2026 POTDs | 4 | `Sep01P3568.java` through `Sep04P3903.java` |
+| September 2026 POTDs | 20 | September 2026 daily challenge files |
 | DSA / Pepcoding | 62 | Basic math, arrays, linked lists, queues, stacks, and generic tree practice |
-| DSA / TUF | 53 | Binary search, BST, binary tree traversals, views, construction, and path problems |
+| DSA / TUF | 54 | Binary search, BST, binary tree traversals, views, construction, and path problems |
 | DSA / Patterns | 1 | Core pattern-printing practice |
 
-**Total:** 405 Java files.
+**Total:** 447 Java files.
 
 ## Content Overview
 
@@ -136,4 +136,4 @@ running from the command line.
 
 **Last Updated:** September 2026
 **Language:** Java
-**Total Progress:** 405 Java files, including 289 LeetCode/POTD files and 116 DSA practice files
+**Total Progress:** 447 Java files, including 330 LeetCode/POTD files and 117 DSA practice files

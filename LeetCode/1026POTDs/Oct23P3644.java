@@ -1,0 +1,16 @@
+public class Oct23P3644 {
+    public int sortPermutation(int[] nums) {
+        int res = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != i) {
+                if (res == -1) {
+                    res = nums[i];
+                } else {
+                    res &= nums[i];
+                }
+            }
+        }
+
+        return res == -1 ? 0 : res;
+    }
+}

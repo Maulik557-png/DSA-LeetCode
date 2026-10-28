@@ -1,0 +1,31 @@
+name: POTD Sync
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install requests
+      - id: sync
+        run: python .github/scripts/potd_sync.py
+        env:
+          LEETCODE_USERNAME: smaulik557
+          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
+          LEETCODE_CSRF: ${{ secrets.LEETCODE_CSRF }}
+      - name: Commit
+        if: steps.sync.outputs.msg != ''
+        run: |
+          git config user.name "Maulik557-png"
+          git config user.email "<your-github-email>"
+          git add LeetCode/1026POTDs
+          git commit -m "${{ steps.sync.outputs.msg }}"
+          git push

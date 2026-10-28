@@ -83,3 +83,5 @@ Thumbs.db
 .env.local
 .env.development
 .env.production
+
+daily_commit.py

@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import datetime
 import requests
@@ -27,6 +28,74 @@ def gql(query, variables=None):
     return data["data"]
 
 
+# ---------- class Solution { ... } -> public class <class_name> { ... } ----------
+
+def _matching_brace(s, i):
+    """Index of the '}' matching the '{' at s[i], skipping strings/chars/comments."""
+    depth, n = 0, len(s)
+    while i < n:
+        c = s[i]
+        if s.startswith("//", i):
+            j = s.find("\n", i)
+            i = n if j == -1 else j
+            continue
+        if s.startswith("/*", i):
+            j = s.find("*/", i + 2)
+            i = n if j == -1 else j + 2
+            continue
+        if s.startswith('"""', i):
+            j = s.find('"""', i + 3)
+            i = n if j == -1 else j + 3
+            continue
+        if c in "\"'":
+            q = c
+            i += 1
+            while i < n and s[i] != q:
+                i += 2 if s[i] == "\\" else 1
+            i += 1
+            continue
+        if c == "{":
+            depth += 1
+        elif c == "}":
+            depth -= 1
+            if depth == 0:
+                return i
+        i += 1
+    raise ValueError("unbalanced braces")
+
+
+def to_java_class(code, class_name):
+    code = code.replace("\r\n", "\n").strip("\n")
+    lines = code.split("\n")
+    imports = [l.strip() for l in lines if l.startswith("import ")]
+    rest = "\n".join(l for l in lines if not l.startswith("import ")).strip("\n")
+
+    body, before, after = None, "", ""
+    m = re.search(r"(?m)^[ \t]*(?:public\s+)?(?:final\s+)?class\s+Solution\b[^{]*\{", rest)
+    if m:
+        try:
+            end = _matching_brace(rest, m.end() - 1)
+            body = rest[m.end():end].strip("\n")
+            before = rest[:m.start()].strip()
+            after = rest[end + 1:].strip()
+        except ValueError:
+            body = None
+    if body is None:
+        # No "class Solution" (e.g. design problems): nest everything inside
+        print(f"{class_name}: no class Solution found, wrapping whole code")
+        body = "\n".join(("    " + l) if l.strip() else l for l in rest.split("\n"))
+
+    parts = []
+    if imports:
+        parts.append("\n".join(dict.fromkeys(imports)))
+    if before:
+        parts.append(before)
+    parts.append(f"public class {class_name} {{\n{body}\n}}")
+    if after:
+        parts.append(after)
+    return "\n\n".join(parts) + "\n"
+
+
 # 1. Today's POTD (LeetCode's day rolls over at 00:00 UTC = 5:30 AM IST)
 potd = gql("""query { activeDailyCodingChallengeQuestion {
     date question { questionFrontendId titleSlug } } }""")["activeDailyCodingChallengeQuestion"]
@@ -34,10 +103,9 @@ date = datetime.date.fromisoformat(potd["date"])
 slug = potd["question"]["titleSlug"]
 number = potd["question"]["questionFrontendId"]
 
-# e.g. LeetCode/1026POTDs
-OUT_DIR = f"LeetCode/{date.strftime('%m%y')}POTDs"
-# e.g. Oct28P100.java
-filename = f"{date.strftime('%b')}{date.day}P{number}.java"
+OUT_DIR = f"LeetCode/{date.strftime('%m%y')}POTDs"                # e.g. LeetCode/1026POTDs
+class_name = f"{date.strftime('%b')}{date.day}P{number}"          # e.g. Oct28P100
+filename = f"{class_name}.java"
 path = os.path.join(OUT_DIR, filename)
 if os.path.exists(path):
     print("Already committed, nothing to do.")
@@ -53,13 +121,13 @@ if not match:
     print("POTD not solved in Java yet.")
     sys.exit(0)
 
-# 3. Fetch the submitted code (needs auth)
+# 3. Fetch the submitted code (needs auth) and wrap it in the file's class
 details = gql("""query($id:Int!){ submissionDetails(submissionId:$id){ code } }""",
               {"id": int(match["id"])})["submissionDetails"]
 
 os.makedirs(OUT_DIR, exist_ok=True)
 with open(path, "w", encoding="utf-8") as f:
-    f.write(details["code"])
+    f.write(to_java_class(details["code"], class_name))
 
 # Expose the commit message to the workflow
 msg = f"{date.strftime('%B')} {date.day} POTD"

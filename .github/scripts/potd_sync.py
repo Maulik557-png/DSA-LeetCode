@@ -6,7 +6,6 @@ import requests
 USER = os.environ["LEETCODE_USERNAME"]
 SESSION = os.environ["LEETCODE_SESSION"]
 CSRF = os.environ["LEETCODE_CSRF"]
-OUT_DIR = "LeetCode/1026POTDs"
 URL = "https://leetcode.com/graphql"
 
 HEADERS = {
@@ -35,7 +34,10 @@ date = datetime.date.fromisoformat(potd["date"])
 slug = potd["question"]["titleSlug"]
 number = potd["question"]["questionFrontendId"]
 
-filename = f"{date.strftime('%b')}{date.day}P{number}.java"   # Oct28P100.java
+# e.g. LeetCode/1026POTDs
+OUT_DIR = f"LeetCode/{date.strftime('%m%y')}POTDs"
+# e.g. Oct28P100.java
+filename = f"{date.strftime('%b')}{date.day}P{number}.java"
 path = os.path.join(OUT_DIR, filename)
 if os.path.exists(path):
     print("Already committed, nothing to do.")

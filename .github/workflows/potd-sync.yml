@@ -1,7 +1,8 @@
 name: POTD Sync
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "0 */3 * * *"
+    - cron: "30 23 * * *"
   workflow_dispatch:
 
 permissions:

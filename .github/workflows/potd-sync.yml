@@ -26,7 +26,9 @@ jobs:
         if: steps.sync.outputs.msg != ''
         run: |
           git config user.name "Maulik557-png"
-          git config user.email "<your-github-email>"
-          git add LeetCode/1026POTDs
+          git config user.email "smaulik557@gmail.com"
+          git add LeetCode
+          if git diff --cached --quiet; then echo "Nothing to commit"; exit 0; fi
           git commit -m "${{ steps.sync.outputs.msg }}"
+          git pull --rebase
           git push

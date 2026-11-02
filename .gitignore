@@ -85,3 +85,4 @@ Thumbs.db
 .env.production
 
 daily_commit.py
+AGENTS.md

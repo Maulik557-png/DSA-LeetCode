@@ -15,7 +15,7 @@ public class LeetCode19 {
         }
     }
 
-    public static ListNode removeNthFromEnd(ListNode head, int n) {
+    static ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode slow = head;
         ListNode fast = head;
 

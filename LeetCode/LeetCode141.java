@@ -9,7 +9,7 @@ public class LeetCode141 {
         System.out.println(hasCycle(ll.head));
     }
 
-    public static boolean hasCycle(ListNode head) {
+    static boolean hasCycle(ListNode head) {
         if(head==null) return false;
         System.gc();
         ListNode slow = head;
@@ -39,6 +39,10 @@ public class LeetCode141 {
     static class ListNode {
         int val;
         ListNode next;
+
+        public int getVal() {
+            return val;
+        }
     }
 
     public static class LinkedList {

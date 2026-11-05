@@ -25,7 +25,8 @@ public class LeetCode84 {
         for (int i = 1; i < n; i++) {
             while (!st.isEmpty() && nums[i] <= nums[st.peek()])
                 st.pop();
-            lb[i] = st.isEmpty() ? -1 : st.peek();
+            Integer leftBoundary = st.isEmpty() ? null : st.peek();
+            lb[i] = leftBoundary == null ? -1 : leftBoundary;
             st.push(i);
         }
 

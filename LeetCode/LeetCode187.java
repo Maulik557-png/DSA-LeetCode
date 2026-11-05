@@ -7,12 +7,11 @@ public class LeetCode187 {
     public static void main(String[] args) {
         String s = "AAAAAAAAAAA";
         System.out.println(findRepeatedDnaSequences(s));
-        return;
     }
 
     public static List<String> findRepeatedDnaSequences(String s) {
         if (s.length() <= 10)
-            return new ArrayList<String>();
+            return new ArrayList<>();
         Set<String> seen = new HashSet<>();
         Set<String> repeated = new HashSet<>();
         for (int i = 0; i <= s.length() - 10; i++) {

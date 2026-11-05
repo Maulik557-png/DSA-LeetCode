@@ -33,7 +33,7 @@ public class LeetCode735 {
 
         int[] res = new int[st.size()];
         int i = res.length - 1;
-        while (st.size() > 0) {
+        while (!st.isEmpty()) {
             res[i] = st.pop();
             i--;
         }

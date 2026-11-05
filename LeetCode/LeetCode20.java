@@ -20,29 +20,35 @@ public class LeetCode20 {
         Stack<Character> st = new Stack<>();
         for (char ch : s.toCharArray()) {
 
-            if (st.size() == 0 && (ch == ')' || ch == ']' || ch == '}')) {
+            if (st.isEmpty() && (ch == ')' || ch == ']' || ch == '}')) {
                 return false;
             }
 
-            if (ch == ')') {
-                if (st.peek() == '(') {
-                    st.pop();
-                    continue;
+            switch (ch) {
+                case ')' -> {
+                    if (st.peek() == '(') {
+                        st.pop();
+                        continue;
+                    }
                 }
-            } else if (ch == ']') {
-                if (st.peek() == '[') {
-                    st.pop();
-                    continue;
+                case ']' -> {
+                    if (st.peek() == '[') {
+                        st.pop();
+                        continue;
+                    }
                 }
-            } else if (ch == '}') {
-                if (st.peek() == '{') {
-                    st.pop();
-                    continue;
+                case '}' -> {
+                    if (st.peek() == '{') {
+                        st.pop();
+                        continue;
+                    }
+                }
+                default -> {
                 }
             }
             st.push(ch);
         }
 
-        return st.size() == 0 ? true : false;
+        return st.isEmpty();
     }
 }

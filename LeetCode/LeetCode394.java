@@ -44,7 +44,7 @@ public class LeetCode394 {
         }
 
         StringBuilder sb = new StringBuilder();
-        while (st.size() > 0) {
+        while (!st.isEmpty()) {
             sb.append(st.pop());
         }
 

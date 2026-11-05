@@ -9,7 +9,7 @@ public class LeetCode16 {
 
     public static int threeSumClosest(int[] nums, int target) {
         int n = nums.length;
-        int nt = target;
+        int nt;
         int min = Integer.MAX_VALUE;
         int res = 0;
 

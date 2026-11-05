@@ -41,7 +41,7 @@ public class LeetCode1456 {
 
     public static int maxVowels(String s, int k) {
 
-        int l = 0, r = 0, res = 0, window = 0;
+        int l = 0, r = 0, res, window = 0;
 
         for (; r < k; r++) {
             window += isVowel(s.charAt(r));

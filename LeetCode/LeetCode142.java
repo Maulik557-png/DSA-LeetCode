@@ -12,7 +12,7 @@ public class LeetCode142 {
         System.out.println(detectCycle(ll.head).val);
     }
 
-    public static ListNode detectCycle(ListNode head) {
+    static ListNode detectCycle(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {

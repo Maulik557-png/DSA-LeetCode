@@ -25,5 +25,9 @@ public class LeetCode543 {
         public TreeNode(int val) {
             this.val = val;
         }
+
+        public int getVal() {
+            return val;
+        }
     }
 }

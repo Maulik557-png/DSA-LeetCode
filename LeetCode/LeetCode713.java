@@ -11,7 +11,7 @@ public class LeetCode713 {
         if (k <= 1) return 0;
 
         int left = 0;
-        int right = 0;
+        int right;
 
         int window = 1;
         int res = 0;

@@ -8,7 +8,7 @@ public static void main(String[] args) {
         System.out.println(middleNode(ll.head).val);
     }
 
-    public static ListNode middleNode(ListNode head) {
+    static ListNode middleNode(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
         while (fast != null && fast.next != null) {

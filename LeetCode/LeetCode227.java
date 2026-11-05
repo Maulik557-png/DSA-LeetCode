@@ -17,7 +17,7 @@ public class LeetCode227 {
             if ((c == 42 || c == 43 || c == 45 || c == 47)) {
                 nums.push(num);
                 num = 0;
-                while (opr.size() > 0 && precedence(opr.peek()) >= precedence(c)) {
+                while (!opr.isEmpty() && precedence(opr.peek()) >= precedence(c)) {
                     char op = opr.pop();
                     int n2 = nums.pop();
                     int n1 = nums.pop();
@@ -28,7 +28,7 @@ public class LeetCode227 {
         }
         nums.push(num);
 
-        while (opr.size() > 0) {
+        while (!opr.isEmpty()) {
             char op = opr.pop();
             int n2 = nums.pop();
             int n1 = nums.pop();
@@ -47,17 +47,12 @@ public class LeetCode227 {
     }
 
     private static int performOps(int n1, int n2, char operator) {
-        switch (operator) {
-            case 43:
-                return n1 + n2;
-            case 45:
-                return n1 - n2;
-            case 42:
-                return n1 * n2;
-            case 47:
-                return n1 / n2;
-            default:
-                return 0;
-        }
+        return switch (operator) {
+            case 43 -> n1 + n2;
+            case 45 -> n1 - n2;
+            case 42 -> n1 * n2;
+            case 47 -> n1 / n2;
+            default -> 0;
+        };
     }
 }

@@ -20,8 +20,6 @@ public class LeetCode151 {
             if (sb.length() != 0) {
                 list.add(sb.toString());
                 sb.setLength(0);
-            } else {
-                continue;
             }
         }
         list.add(sb.toString());

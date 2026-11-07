@@ -1,3 +1,5 @@
+import java.util.PriorityQueue;
+
 public class Nov7P1882 {
     public int[] assignTasks(int[] servers, int[] tasks) {
         PriorityQueue<int[]> free = new PriorityQueue<>((a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]);

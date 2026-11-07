@@ -68,10 +68,12 @@ def to_java_class(code, class_name):
     code = code.replace("\r\n", "\n").strip("\n")
     lines = code.split("\n")
     imports = [l.strip() for l in lines if l.startswith("import ")]
-    rest = "\n".join(l for l in lines if not l.startswith("import ")).strip("\n")
+    rest = "\n".join(
+        l for l in lines if not l.startswith("import ")).strip("\n")
 
     body, before, after = None, "", ""
-    m = re.search(r"(?m)^[ \t]*(?:public\s+)?(?:final\s+)?class\s+Solution\b[^{]*\{", rest)
+    m = re.search(
+        r"(?m)^[ \t]*(?:public\s+)?(?:final\s+)?class\s+Solution\b[^{]*\{", rest)
     if m:
         try:
             end = _matching_brace(rest, m.end() - 1)
@@ -83,11 +85,13 @@ def to_java_class(code, class_name):
     if body is None:
         # No "class Solution" (e.g. design problems): nest everything inside
         print(f"{class_name}: no class Solution found, wrapping whole code")
-        body = "\n".join(("    " + l) if l.strip() else l for l in rest.split("\n"))
+        body = "\n".join(("    " + l) if l.strip()
+                         else l for l in rest.split("\n"))
 
     parts = []
     if imports:
-        parts.append("\n".join(dict.fromkeys(imports)))
+        imports = list(dict.fromkeys(["import java.util.*;"] + imports))
+        parts = ["\n".join(imports)]
     if before:
         parts.append(before)
     parts.append(f"public class {class_name} {{\n{body}\n}}")
@@ -103,8 +107,10 @@ date = datetime.date.fromisoformat(potd["date"])
 slug = potd["question"]["titleSlug"]
 number = potd["question"]["questionFrontendId"]
 
-OUT_DIR = f"LeetCode/{date.strftime('%m%y')}POTDs"                # e.g. LeetCode/1026POTDs
-class_name = f"{date.strftime('%b')}{date.day}P{number}"          # e.g. Oct28P100
+# e.g. LeetCode/1026POTDs
+OUT_DIR = f"LeetCode/{date.strftime('%m%y')}POTDs"
+# e.g. Oct28P100
+class_name = f"{date.strftime('%b')}{date.day}P{number}"
 filename = f"{class_name}.java"
 path = os.path.join(OUT_DIR, filename)
 if os.path.exists(path):

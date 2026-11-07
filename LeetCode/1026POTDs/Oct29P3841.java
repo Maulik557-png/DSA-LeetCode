@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 class Tree {
     final int[] parent, tin, tout, order;
     final int[][] first;

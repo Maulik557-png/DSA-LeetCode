@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.PriorityQueue;
+
 public class Oct30P3970 {
     public int shortestPath(int n, int[][] edges, String labels, int k) {
         if (n == 1) {
